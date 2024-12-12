@@ -1,0 +1,30 @@
+languageCode = "es"
+languageName = "Spanish"
+weight = 1
+title = "El PoshoX"
+
+[params]
+  displayName = "ES"
+  isoCode = "es"
+  rtl = false
+  dateFormat = "2 Enero 2006"
+  logo = "img/blowfish_logo_transparent.png"
+  description = "Tech Blog of my day to day"
+
+[params.author]
+  name = "Az García Zúñiga"
+  image = "img/blowfish_logo.png"
+  headline = "Robot pretendiendo escribir articulos como humano"
+  bio = "Soy un <i>Nerdy</i> al que le encanta escribir sobre su vida diaria sobre temas como DevOps, SRE, Cloud, y más."
+  links = [
+    { link = "https://elposhox.dev/" },
+    { facebook = "https://facebook.com/username" },
+    { github = "https://github.com/username" },
+    { instagram = "https://instagram.com/username" },
+    { linkedin = "https://linkedin.com/in/username" },
+    { medium = "https://medium.com/username" },
+    { tiktok = "https://tiktok.com/@username" },
+    { x-twitter = "https://twitter.com/username" },
+    { youtube = "https://youtube.com/username" },
+    { ko-fi = "https://ko-fi.com/username" },
+  ]

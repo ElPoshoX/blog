@@ -1,0 +1,13 @@
+{
+    "name": "Azgad García Zúñiga",
+    "image" : "img/nuno_avatar.jpg",
+    "bio": "Owner",
+    "social": [
+        { "linkedin": "https://www.linkedin.com/in/azgad-adrian-merced-iii-garc%C3%ADa-z%C3%BA%C3%B1iga-809890a0/" },
+        { "x-twitter": "https://x.com/r00t_zeroox" },
+        { "instagram": "https://instagram.com/elposhox" },
+        { "medium": "https://medium.com/@elposhox" },
+        { "github": "https://github.com/ElPoshoX" },
+        { "goodreads": "http://goodreads.com/elposhox" }
+    ]
+}
