@@ -29,5 +29,5 @@ Code dedicated to my personal blog. Built with [Hugo](https://gohugo.io/) and [B
 
 ## Latest Posts 📬
 <!-- BLOG-POST-LIST:START -->
-
+- [Welcome to Blowfish](http://www.elposhox.dev/posts/first_post/)
 <!-- BLOG-POST-LIST:END -->
