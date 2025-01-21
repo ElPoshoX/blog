@@ -1,8 +1,8 @@
 <p align="center">
   <a href="https://elposhox.dev">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://elposhox.dev/img/logo/icon2transparent.png">
-      <img src="https://elposhox.dev/img/logo/icon1transparent.png" height="100">
+      <source media="(prefers-color-scheme: dark)" srcset="https://elposhox.dev/img/elposhox_logo_transparent.png">
+      <img src="https://elposhox.dev/img/elposhox_logo_transparent.png" height="100">
     </picture>
     <h1 align="center">El PoshoX Blog</h1>
   </a>

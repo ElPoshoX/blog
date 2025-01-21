@@ -8,24 +8,23 @@ title = "El PoshoX"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/blowfish_logo_transparent.png"
-  # secondaryLogo = "img/blowfish_logo_transparent.png"
+  logo = "img/elposhox_logo_transparent.png"
+  # secondaryLogo = "img/elposhox_logo_transparent.png"
   description = "Tech Blog of my day to day"
 
 [params.author]
   name = "Az García Zúñiga"
-  image = "img/blowfish_logo.png"
+  image = "img/elposhox_logo.png"
   headline = "Robot pretending to write articles like a human"
   bio = "I'm a nerdy who loves to write about his daily life on topics such as DevOps, SRE, Cloud, and more."
   links = [
     { link = "https://elposhox.dev/" },
-    { facebook = "https://facebook.com/username" },
+    { facebook = "https://facebook.com/ElPoshox.dev" },
     { github = "https://github.com/username" },
-    { instagram = "https://instagram.com/username" },
-    { linkedin = "https://linkedin.com/in/username" },
-    { medium = "https://medium.com/username" },
-    { tiktok = "https://tiktok.com/@username" },
-    { x-twitter = "https://twitter.com/username" },
-    { youtube = "https://youtube.com/username" },
-    { ko-fi = "https://ko-fi.com/username" },
+    { instagram = "https://instagram.com/elposhox.dev" },
+    { linkedin = "https://www.linkedin.com/in/azgad-adrian-merced-iii-garc%C3%ADa-z%C3%BA%C3%B1iga-809890a0/" },
+    { medium = "https://medium.com/@elposhox.dev" },
+    # { tiktok = "https://tiktok.com/@username" },
+    { youtube = "https://www.youtube.com/@elposhoxdev" },
+    { ko-fi = "https://ko-fi.com/elposhox" },
   ]

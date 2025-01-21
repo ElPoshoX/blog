@@ -21,26 +21,10 @@
   weight = 15
 
 [[main]]
-  name = "Donar :beer:"
-  pageRef = "donate"
-  weight = 20
-
-[[main]]
-  name = "Contacto"
-  pageRef = "contact"
-  weight = 25
-
-[[main]]
   identifier = "twitter"
   pre = "x-twitter"
   url = "https://twitter.com/r00t_zeroox"
   weight = 200
-
-[[main]]
-  identifier = "github"
-  pre = "github"
-  url = "https://github.com/ElPoshoX/blog"
-  weight = 400
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
