@@ -15,4 +15,4 @@ I have studies in **computer science** (bachelors and masters) and at some point
 
 My areas of expertise are **Cloud**, **DevOps**, **Platform Engineering**, **Chaos Engineering** and **SRE**, but I have also worked as a Software Developer, DBA and SysAdmin.
 
-I currently work as **Principal Technical Architect** and provide external consulting on any of the other topics. :rocket:
+I currently work as **Sr Staff Technical Architect** and provide external consulting on any of the other topics. :rocket:

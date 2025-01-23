@@ -17,5 +17,5 @@ Tengo estudios en **ciencias de la computación** (licenciatura y maestría) y e
 Mis áreas de especialización son la **Nube**, **DevOps**, **Platform Engineering**, **Chaos Engineering** y **SRE**, pero también me he desempeñado como Software Developer, DBA y SysAdmin.
 
 
-Actualmente me desempeño como **Principal Technical Architect** y doy asesorías externas de cualquiera de los demás temas. :rocket:
+Actualmente me desempeño como **Sr Staff Technical Architect** y doy asesorías externas de cualquiera de los demás temas. :rocket:
 
