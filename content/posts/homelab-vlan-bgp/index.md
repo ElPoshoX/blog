@@ -13,7 +13,7 @@ cascade:
 ---
 
 {{< lead >}}
-Segregando nuestra red y disponbilizandola de manera correcta.
+Segregando y disponibilizando nuestra red de manera correcta.
 {{< /lead >}}
 
 ## Consideraciones
