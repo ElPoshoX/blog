@@ -78,7 +78,7 @@ Por último, añadimos el addon a nuestro cluster de EKS, el cual desplegara un 
 ## Montando S3 como volumen
 Para llegar a nuestra meta, no queda más que probar que todo funcionara correctamente. Se crearon algunos [manifestos de kubernetes](https://github.com/AzgadAGZ/k8s-csi-s3-poc/tree/main/k8s-manifests) que se necesitaban para probar todo, donde se tuvo que configurar basado en lo creado previamente.
 
-La primera parte relevante a crear es el `Persistent Volume`, en este archivo se configuran partes importantes como `accessModes`, que nos define la escritura y/o lectura al S3, en este caso solo se necesita leer los archivos por lo cual un `ReadOnlyMany` es suficiente. El `mountOptions --allow-other`, proporciona acceso a otros usuarios que no sea el **root** para acceder al mount, `region` como su nombre sugiere, es la región de AWS donde vive el bucket, `prefix` es una atributo opcional, en este caso se definió para poder montar "folders" específicos del bucket en caso de que se quiera reutilizar con varias aplicaciones, y por último, `csi.volumeAttributes.bucketName` el cual define el nombre del bucket que se quiere montar, y que debera de coincidir con el SA y el rol creados previamente.
+La primera parte relevante a crear es el `Persistent Volume`, en este archivo se configuran partes importantes como `accessModes`, que nos define la escritura y/o lectura al S3, en este caso solo se necesita leer los archivos por lo cual un `ReadOnlyMany` es suficiente. El `mountOptions --allow-other`, proporciona acceso a otros usuarios que no sea el **root** para acceder al mount, `region` como su nombre sugiere, es la región de AWS donde vive el bucket, `prefix` es una atributo opcional, en este caso se definió para poder montar "folders" específicos del bucket en caso de que se quiera reutilizar con varias aplicaciones, y por último, `csi.volumeAttributes.bucketName` el cual define el nombre del bucket que se quiere montar, y que deberá de coincidir con el SA y el rol creados previamente.
 
 ````yaml
 apiVersion: v1
@@ -107,7 +107,6 @@ spec:
 ````
 
 Lo segundo es el `Persistent Volume Claim`, que como ya sabrán, es básicamente y tal cual una petición de espacio a un tipo especifico de almacenamiento, en nuestro caso, al `PV` que ligamos al S3. Lo único relevante aquí es el `resources.requests.storage` de 1 Gi (sinceramente necesita mucho menos), y el `volumeName` que debe de hacer match con el nombre del `PV`.
-Con eso en mente, 
 
 ````yaml
 apiVersion: v1
@@ -123,21 +122,18 @@ spec:
     requests:
       storage: 1Gi 
   volumeName: s3-pv
-
 ````
 
 Por último, pero no por eso menos importante, el `Deployment`, en este, usaremos el `SA` que creamos previamente, y de igual manera el volumen, el cual asignaremos al path `/data` dentro del contenedor.
 
 ````yaml
 # deployment.yaml
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prism-deployment
 spec:
     ...
-      serviceAccountName: prism-poc-spin-sa  # According to the previous SA created
       securityContext: {}
       containers:
         - name: prism
