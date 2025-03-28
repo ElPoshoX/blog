@@ -47,7 +47,7 @@ En mi caso el **UDM SE** corre sobre Unifi OS V4.x, y aunque tiene soporte nativ
 ### Encender el SSH del Router
 Por defecto esto viene apagado, por lo cual necesitamos habilitarlo antes de entrar, para ello, vamos a ir a la sección de **Settings > Control Plane > Console** y habilitaremos el checkbox de **SSH**, una vez hecho esto, ahí mismo damos click donde dice **"Change Password"** para asignar la contraseña que vamos a usar para ingresar.
 
-![SSH Checkbox](control-plane-ip.png "Encendiendo el SSH del Router")
+![SSH Checkbox](ssh-checkbox.png "Encendiendo el SSH del Router")
 
 Con eso configurado, y antes de proseguir, anotamos la IP del gateway router, la cual podemos verla acá. 
 
@@ -59,7 +59,7 @@ En la terminal, ejecutamos `ssh root@192.168.1.1` (la ip debe ser la que anotamo
 ![SSH Into](ssh-udm.png "SSH hacia el Gateway")
 
 ### Configurar On-Boot Script
-Como parte de la libreria [unifios-utilities](https://github.com/unifi-utilities/unifios-utilities) tenemos el script de [On-Boot](https://github.com/unifi-utilities/unifios-utilities/blob/main/on-boot-script-2.x/README.md), el cual, como su nombre sugiere, sirve para cargar configuraciones al UDM cuando sufre algún reinicio o incluso cuando se realiza alguna actualización de firmware.
+Como parte de la librería [unifios-utilities](https://github.com/unifi-utilities/unifios-utilities) tenemos el script de [On-Boot](https://github.com/unifi-utilities/unifios-utilities/blob/main/on-boot-script-2.x/README.md), el cual, como su nombre sugiere, sirve para cargar configuraciones al UDM cuando sufre algún reinicio o incluso cuando se realiza alguna actualización de firmware.
 
 Para ello, en nuestra terminal dentro del UDM vamos a ejecutar `curl -fsL "https://raw.githubusercontent.com/unifi-utilities/unifios-utilities/HEAD/on-boot-script-2.x/remote_install.sh" | /bin/sh`. Una vez finalizado podemos proseguir a instalar FRR.
 
@@ -104,8 +104,9 @@ Cuando todo esté listo, nos toca activar el `daemon` de `bgpd`.
 
 ### Activando bgpd
 Para activar el `daemon` que corresponde a `bgpd` vamos a ejecutar `vi /etc/frr/daemons` y en nuestro editor, vamos a cambiar el siguiente valor de `bgpd=no` a `bgpd=yes`, guardamos y procedemos a la última parte.
-````
-...bash
+
+````bash
+...
 # The watchfrr, zebra and staticd daemons are always started.
 #
 bgpd=yes
