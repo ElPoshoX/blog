@@ -34,7 +34,7 @@ There is not much to talk about here, we need to have installed:
 
 
 ## How to use it?
-Once we have downloaded our [Kubernetes Scripts] repository (https://github.com/AzgadAGZ/kubernetes-scripts) we proceed to go directly to the `kubecontext-creator` folder.
+Once we have downloaded our [Kubernetes Scripts repository](https://github.com/AzgadAGZ/kubernetes-scripts) we proceed to go directly to the `kubecontext-creator` folder.
 
 ````bash
 git clone https://github.com/AzgadAGZ/kubernetes-scripts
