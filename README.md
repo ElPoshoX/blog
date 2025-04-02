@@ -29,7 +29,9 @@ Code dedicated to my personal blog. Built with [Hugo](https://gohugo.io/) and [B
 
 ## Latest Posts 📬
 <!-- BLOG-POST-LIST:START -->
+- [Generando multiples contextos de EKS con AWS SSO](https://elposhox.dev/posts/kube-context-generator/)
 - [Usando AWS S3 como Persistent Volume en EKS](https://elposhox.dev/posts/s3-csi-driver/)
 - [MetalLB + UDM SE + VLAN: Preparando el HomeLab](https://elposhox.dev/posts/homelab-vlan-bgp/)
+- [K3S: Kubernetes ligero](https://elposhox.dev/posts/diy-nas/)
 - [K3S: Kubernetes ligero](https://elposhox.dev/posts/k3s/)
 <!-- BLOG-POST-LIST:END -->
