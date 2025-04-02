@@ -22,7 +22,7 @@ So it is much easier to automate! To do this, I created the `Kube Context Creato
 
 
 Basically the script receives two inputs, `AWS_PROFILES` and `AWS_REGIONS`, which will iterate over both to list the clusters in each region, obtaining information such as the endpoint, certificate, cluster name, etc., and with this it will generate three important lists: `clusters`, `users` and `contexts`.
-Once everything is generated, you will want a temporary file where this configuration is saved temporarily, and finally a merge is made with the `~/.kube/config` file that already exists in the user's folder (if not, an empty file is created and the new contexts are added). 
+Once everything is generated, a temporary file will be created where this configuration is saved temporarily, and finally a merge is made with the `~/.kube/config` file that already exists in the user's folder (if not, an empty file is created and the new contexts are added). 
 
 
 ## Prerequisites
