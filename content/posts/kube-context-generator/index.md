@@ -11,11 +11,11 @@ cascade:
 ---
 
 ## La pereza nuevamente ha atacado
-Esta situación no es la primera vez que me pasa, usualmente se ve como un, llegas a un nuevo trabajo, te dan acceso a AWS solo para darte cuenta, que tienen muchos accounts y ahí comienza la pereza, creas los perfiles de SSO ¿y ahora que?, ¿vamos a crear todos los contextos de Kubernetes a manos?.
+Esta situación no es la primera vez que me pasa, usualmente se ve como un, llegas a un nuevo trabajo, te dan acceso a AWS solo para darte cuenta, que tienen muchos accounts y ahí comienza la pereza, creas los perfiles de SSO ¿y ahora que?, ¿vamos a crear todos los contextos de Kubernetes a mano?.
 
 
 ## No lo creo
-Cuando son 2 o 3 accounts, es aceptable hasta cierto punto, pero imaginemos que son 3 cuentas, con 10 regiones, ya no suena tán fácil, ¿no?.
+Cuando son 2 o 3 accounts, es aceptable hasta cierto punto, pero imaginemos que son 3 cuentas, con 10 regiones, ya no suena tan fácil, ¿no?.
 Por ello, es mucho más fácil poder automatizar! Para ello cree el script de `Kube Context Creator` que podemos encontrar [aquí](https://github.com/AzgadAGZ/kubernetes-scripts/tree/main/kubecontext-creator). 
 
 Básicamente el script recibe dos inputs, `AWS_PROFILES`y `AWS_REGIONS`, el cuál va a iterar sobre ambas para listar los clusters en cada región, obteniendo información como el endpoint, certificado, nombre del cluster, etc., y con ello va a generar tres listas importantes: `clusters`, `users` y `contexts`.
