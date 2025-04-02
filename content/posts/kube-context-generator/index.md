@@ -19,7 +19,7 @@ Cuando son 2 o 3 accounts, es aceptable hasta cierto punto, pero imaginemos que 
 Por ello, es mucho más fácil poder automatizar! Para ello cree el script de `Kube Context Creator` que podemos encontrar [aquí](https://github.com/AzgadAGZ/kubernetes-scripts/tree/main/kubecontext-creator). 
 
 Básicamente el script recibe dos inputs, `AWS_PROFILES`y `AWS_REGIONS`, el cuál va a iterar sobre ambas para listar los clusters en cada región, obteniendo información como el endpoint, certificado, nombre del cluster, etc., y con ello va a generar tres listas importantes: `clusters`, `users` y `contexts`.
-Una vez generado todo, se va a crear un archivo temporal donde esta configuración se guarda de manera temporal, y finalmente se hace un merge con el archivo `~/.kube/config` que ya exista en el folder del usuario (en caso de no hacerlo, se crea un arcivo vacio y se añaden los nuevos contexts.) 
+Una vez generado todo, se va a crear un archivo temporal donde esta configuración se guardara, y finalmente se hace un merge con el archivo `~/.kube/config` que ya exista en el folder del usuario (en caso de no hacerlo, se crea un arcivo vacio y se añaden los nuevos contexts.) 
 
 
 ## Pre-requisitos
