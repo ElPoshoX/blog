@@ -29,6 +29,7 @@ Code dedicated to my personal blog. Built with [Hugo](https://gohugo.io/) and [B
 
 ## Latest Posts 📬
 <!-- BLOG-POST-LIST:START -->
+- [Usando Github Container Registry para almacenar Helm Charts](https://elposhox.dev/posts/ghcr-helm-charts/)
 - [Generando multiples contextos de EKS con AWS SSO](https://elposhox.dev/posts/kube-context-generator/)
 - [Usando AWS S3 como Persistent Volume en EKS](https://elposhox.dev/posts/s3-csi-driver/)
 - [MetalLB + UDM SE + VLAN: Preparando el HomeLab](https://elposhox.dev/posts/homelab-vlan-bgp/)
