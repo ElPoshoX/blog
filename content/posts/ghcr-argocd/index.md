@@ -2,7 +2,7 @@
 title: "Usando GHCR desde ArgoCD"
 weight: 1
 tags: ["github", "oci", "helm", "chart", "argocd"]
-date: "2025-04-08T13:00:00+05:30"
+date: 2025-05-09
 showDateUpdated: true
 cascade:
   showDate: true
