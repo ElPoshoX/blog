@@ -3,9 +3,9 @@ title: "Using Github Container Registry to host Helm Charts"
 weight: 1
 tags: ["github", "oci", "helm", "chart"]
 date: "2025-04-08T13:00:00+05:30"
-showDateUpdated: true
+showDateUpdated: false
 cascade:
-  showDate: true
+  showDate: false
   showAuthor: false
   invertPagination: true
 ---

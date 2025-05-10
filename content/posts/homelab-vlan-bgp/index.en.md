@@ -5,9 +5,9 @@ tags: ["k8s", "k3s", "vlan", "bgp", "udm"]
 date: "2025-03-13T13:31:54+05:30"
 series: ["k3s"]
 series_order: 2
-showDateUpdated: true
+showDateUpdated: false
 cascade:
-  showDate: true
+  showDate: false
   showAuthor: false
   invertPagination: true
 ---

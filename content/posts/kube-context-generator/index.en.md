@@ -3,9 +3,9 @@ title: "Generating multiple EKS contexts with AWS SSO"
 weight: 1
 tags: ["k8s", "aws", "eks", "sso", "kubeconfig"]
 date: "2025-04-01T18:20:54+05:30"
-showDateUpdated: true
+showDateUpdated: false
 cascade:
-  showDate: true
+  showDate: false
   showAuthor: false
   invertPagination: true
 ---

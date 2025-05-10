@@ -5,9 +5,9 @@ tags: ["k8s", "k3s", "tools"]
 date: "2025-01-13T15:21:54+05:30"
 series: ["k3s"]
 series_order: 1
-showDateUpdated: true
+showDateUpdated: false
 cascade:
-  showDate: true
+  showDate: false
   showAuthor: false
   invertPagination: true
 ---

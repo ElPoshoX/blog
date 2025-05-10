@@ -3,9 +3,9 @@ title: "Using AWS S3 as Persistent Volume in EKS"
 weight: 1
 tags: ["k8s", "aws", "s3", "csi", "storage"]
 date: "2025-03-25T16:20:54+05:30"
-showDateUpdated: true
+showDateUpdated: false
 cascade:
-  showDate: true
+  showDate: false
   showAuthor: false
   invertPagination: true
 ---
