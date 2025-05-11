@@ -29,9 +29,10 @@ Code dedicated to my personal blog. Built with [Hugo](https://gohugo.io/) and [B
 
 ## Latest Posts 📬
 <!-- BLOG-POST-LIST:START -->
-- [Usando Github Container Registry para almacenar Helm Charts](https://elposhox.dev/posts/ghcr-helm-charts/)
-- [Generando multiples contextos de EKS con AWS SSO](https://elposhox.dev/posts/kube-context-generator/)
-- [Usando AWS S3 como Persistent Volume en EKS](https://elposhox.dev/posts/s3-csi-driver/)
-- [MetalLB + UDM SE + VLAN: Preparando el HomeLab](https://elposhox.dev/posts/homelab-vlan-bgp/)
-- [K3S: Kubernetes ligero](https://elposhox.dev/posts/k3s/)
+- [Usando GHCR desde ArgoCD](http://elposhox.dev/posts/ghcr-argocd/)
+- [Usando Github Container Registry para almacenar Helm Charts](http://elposhox.dev/posts/ghcr-helm-charts/)
+- [Generando multiples contextos de EKS con AWS SSO](http://elposhox.dev/posts/kube-context-generator/)
+- [Usando AWS S3 como Persistent Volume en EKS](http://elposhox.dev/posts/s3-csi-driver/)
+- [MetalLB + UDM SE + VLAN: Preparando el HomeLab](http://elposhox.dev/posts/homelab-vlan-bgp/)
+- [K3S: Kubernetes ligero](http://elposhox.dev/posts/k3s/)
 <!-- BLOG-POST-LIST:END -->
