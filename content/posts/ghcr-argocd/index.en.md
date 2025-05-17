@@ -20,25 +20,26 @@ The next step is to use them from ArgoCD to follow our beloved GitOps principles
 - An instance of **ArgoCD running**.
 
 ## Generating a Token in Github
-The first thing we need to do is go to Github, to the Personal Access Tokens section, and generate a [**Fine-grained Token**](https://github.com/settings/personal-access-tokens). Once there, click the `Generate new token` button.
+The first thing we need to do is go to Github, to the Personal Access Tokens section, and generate a [**Personal Access Token**](https://github.com/settings/personal-access-tokens). Once there, click the `Generate new token` button.
 
-![GH Fine-Grained Token](fine-grained-token.png "Fine-grained Tokens Section")
+{{< alert >}}
+**Nota!** We're using PAT rather than Fine-Grained Tokens since this last ones don't support access to Github Packages, that's detailed [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#fine-grained-personal-access-tokens-limitations)
+{{< /alert >}}
 
-Give the token a suitable name, in my case `Helm - ArgoCD`. For the `Owner`, it’s important to set the scope correctly. I’m using my Github organization (**ElPoshoX**), but you can use your user or any org you’re part of. Set the expiration time to **90 days** so you have to rotate it every 3 months for security.
+![GHPersonal Access Token](PAT.png "Personal Access Token Section")
 
-![GH Fine-Grained Token Creation - 1](new-token-one.png "New Fine-grained Token - Part 1")
+Give the token a suitable name, in my case `Helm - ArgoCD` and we set the expiration time to **90 days** so you have to rotate it every **3 months** for security
 
-For the repositories that can use the token, select **only** where the helm charts are centralized (you can expand the scope if needed), and in `Repository permissions` set `Contents` to `Read-only`.
+![GH Personal Access Token Creation - 1](PAT_step_1.png "New Personal Access Token - Part 1")
 
-![GH Fine-Grained Token Creation - 2](new-token-two.png "New Fine-grained Token - Part 2")
+En cuanto a los scopes, marcamos el de `read:packages`, que es el que necesitamos para poder leer los paquetes y damso en el botón de `Generate token`.
 
-![GH Fine-Grained Token Creation - 3](new-token-three.png "New Fine-grained Token - Part 3")
+![GH Personal Access Token Creation - 2](PAT_step_2.png "New Personal Access Token - Part 2")
 
-Go to the bottom of the page and click **Generate Token**. Once generated, copy it to use later.
+Una vez generado, procedemos a copiarlo para usarlo más adelante.
 
-![GH Fine-Grained Token Creation - 4](new-token-four.png "New Fine-grained Token - Part 4")
+![GH Personal Access Token Creation - 2](PAT_step_3.png "New Personal Access Token - Part 3")
 
-![GH Fine-Grained Token Creation - 5](new-token-five.png "New Fine-grained Token - Part 5")
 
 ## Storing it Securely in Parameter Store
 Personally, I really like the combination of [External Secrets Operator](https://external-secrets.io/latest/) (ESO) with [AWS SSM (Parameter Store)](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html), which allows you to manage sensitive information with GitOps principles.

@@ -20,26 +20,25 @@ Lo que sigue, es poder usarlos desde ArgoCD para seguir nuestros tan queridos pr
 - Una instancia de **ArgoCD corriendo**.
 
 ## Generando un token en Github
-Lo primero que necesitamos es ir a Github a la sección de Personal Access Tokens y generar un [**Fine-grained Tokens**](https://github.com/settings/personal-access-tokens). Una vez ahí damos click en el botón de `Generate new token`.
+Lo primero que necesitamos es ir a Github a la sección de Personal Access Tokens y generar un [**Personal Access Token (Classic)**](https://github.com/settings/personal-access-tokens). Una vez ahí damos click en el botón de `Generate new token`.
 
-![GH Fine-Grained Token](fine-grained-token.png "Sección de Fine-grained Tokens")
+{{< alert >}}
+**Nota!** Estamos usando PAT en lugar de Fine-Grained Tokens dado que estos últimos no soportan acceso a Github Packages, ese detalle se encuentra [aquí](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#fine-grained-personal-access-tokens-limitations)
+{{< /alert >}}
 
+![GHPersonal Access Token](PAT.png "Sección de Personal Access Tokens")
 
-Le damos un nombre acorde al token que en mi caso es `Helm - ArgoCD`, en cuanto al `Owner`, es importante dar el scope correctamente, yo estoy usando el de mi organización de Github (**ElPoshoX**), pero se puede usar el de nuestro usuario o un org de la cual seamos parte. Ajustamos el tiempo de expiración a **90 días**, así tenemos que rotarlo cada 3 meses por seguridad.
+Le damos un nombre acorde al token que en mi caso es `Helm - ArgoCD` y ajustamos el tiempo de expiración a **90 días**, así tenemos que rotarlo cada **3 meses** por seguridad.
 
-![GH Fine-Grained Token Creation - 1](new-token-one.png "Nuevo Fine-grained Token - Parte 1")
+![GH Personal Access Token Creation - 1](PAT_step_1.png "Nuevo Personal Access Token - Parte 1")
 
-En cuanto a los repositorios que podrán usar el token, seleccionamos **únicamente** donde están los helm chart centralizados (se puede ampliar el scope en caso de requerirse), y dentro de los `Repository permissions` ajustamos a `Read-only` el de `Contents`.
+En cuanto a los scopes, marcamos el de `read:packages`, que es el que necesitamos para poder leer los paquetes y damso en el botón de `Generate token`.
 
-![GH Fine-Grained Token Creation - 2](new-token-two.png "Nuevo Fine-grained Token - Parte 2")
+![GH Personal Access Token Creation - 2](PAT_step_2.png "Nuevo Personal Access Token - Parte 2")
 
-![GH Fine-Grained Token Creation - 3](new-token-three.png "Nuevo Fine-grained Token - Parte 3")
+Una vez generado, procedemos a copiarlo para usarlo más adelante.
 
-Vamos al final de la página y damos click en **Generate Token**. Una vez generado, procedemos a copiarlo para usarlo más adelante.
-
-![GH Fine-Grained Token Creation - 4](new-token-four.png "Nuevo Fine-grained Token - Parte 4")
-
-![GH Fine-Grained Token Creation - 5](new-token-five.png "Nuevo Fine-grained Token - Parte 5")
+![GH Personal Access Token Creation - 2](PAT_step_3.png "Nuevo Personal Access Token - Parte 3")
 
 
 ## Almacenándolo de manera segura en Parameter Store
