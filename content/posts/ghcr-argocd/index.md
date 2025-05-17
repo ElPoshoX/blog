@@ -32,7 +32,7 @@ Le damos un nombre acorde al token que en mi caso es `Helm - ArgoCD` y ajust
 
 ![GH Personal Access Token Creation - 1](PAT_step_1.png "Nuevo Personal Access Token - Parte 1")
 
-En cuanto a los scopes, marcamos el de `read:packages`, que es el que necesitamos para poder leer los paquetes y damso en el botón de `Generate token`.
+En cuanto a los scopes, marcamos el de `read:packages`, que es el que necesitamos para poder leer los paquetes y seleccionamos el botón de `Generate token`.
 
 ![GH Personal Access Token Creation - 2](PAT_step_2.png "Nuevo Personal Access Token - Parte 2")
 
