@@ -1,5 +1,5 @@
-languageCode = "es"
-languageName = "Spanish"
+locale = "es"
+label = "Spanish"
 weight = 1
 title = "El PoshoX"
 
@@ -14,7 +14,7 @@ title = "El PoshoX"
 [params.author]
   name = "Az García Zúñiga"
   image = "img/elposhox_logo.png"
-  headline = "Robot pretendiendo escribir artículos como humano"
+  headline = "Principal Engineer · Platform Engineering · DevOps · SRE"
   bio = "Soy un <i>Nerdy</i> al que le encanta escribir sobre su vida diaria sobre temas como DevOps, SRE, Cloud, y más."
   links = [
     { link = "https://elposhox.dev/" },
