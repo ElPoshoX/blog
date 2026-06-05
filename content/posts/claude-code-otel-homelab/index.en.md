@@ -44,7 +44,7 @@ That's enough for a full dashboard: cost, tokens, latency by model, most-used to
 
 ## Architecture
 
-```mermaid
+{{< mermaid >}}
 graph LR
     CC[Claude Code] -->|OTLP gRPC :4317| OC[OTel Collector]
     OC -->|OTLP HTTP| Mimir[Mimir]
@@ -52,7 +52,7 @@ graph LR
     Tempo -->|remote_write| Mimir
     Mimir --> Grafana
     Tempo --> Grafana
-```
+{{< /mermaid >}}
 
 The OTel Collector runs as a DaemonSet on the cluster. It receives OTLP over gRPC, processes metrics through two custom processors (explained below), and forwards them to Mimir. Traces go to Tempo, which also generates span-metrics and writes them to Mimir via remote_write.
 
