@@ -696,6 +696,3 @@ Si te falta alguno, no lances el loop. Vas a gastar tokens debuggeando lo que de
 ## Lo que sigue
 
 En el siguiente post de la serie vamos a ver los guardrails: cómo hacer que tus loops se comporten incluso cuando no estás mirando. Skills que actúan como constraints, hooks que validan antes de ejecutar, y patterns para que el agente se detenga cuando debe.
-
-Si quieres el ángulo no-técnico, el argumento de por qué los loops importan para cómo trabajamos, lee [El Loop Que Nadie Testea] en Substack.
-

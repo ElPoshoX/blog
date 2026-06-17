@@ -696,6 +696,3 @@ If any of these is missing, do not launch the loop. You will spend tokens debugg
 ## What comes next
 
 In the next post in the series we will look at guardrails: how to make your loops behave even when you are not watching. Skills that act as constraints, hooks that validate before executing, and patterns for making the agent stop when it should.
-
-If you want the non-technical angle, the argument for why loops matter for how we work, read [The Loop Nobody Tests] on Substack.
-
