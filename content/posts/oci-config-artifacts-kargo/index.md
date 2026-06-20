@@ -71,7 +71,7 @@ Compilar config al momento del release, empaquetarla como artefacto OCI, subirla
 
 **Por qué ganó:** Inmutable, firmada y auditable. Un solo escritor al gitops repo (Kargo). Config e imagen en un commit. Cero ventana de inconsistencia. Sin tooling nuevo en el cluster. La misma infraestructura de registry que ya usas para imágenes.
 
-```mermaid
+{{< mermaid >}}
 graph TD
     subgraph "Evaluación de alternativas"
         A["A: Commit directo<br/>(como staging)"] -->|No atómico| X[RECHAZADA]
@@ -80,7 +80,7 @@ graph TD
         D["D: GHA dispatch<br/>desde Kargo"] -->|Asíncrono, no atómico| X
         E["E: Artefactos OCI<br/>de config"] -->|Inmutable + atómico| V[ELEGIDA]
     end
-```
+{{< /mermaid >}}
 
 ---
 
@@ -90,7 +90,7 @@ Dos pipelines. Separación total de responsabilidades.
 
 El pipeline de release (CD) compila, empaqueta y firma. Nunca toca el gitops repo. Kargo descarga, verifica, escribe y despliega. Un solo escritor mediante un commit atómico.
 
-```mermaid
+{{< mermaid >}}
 sequenceDiagram
     participant CI as Release Pipeline
     participant GHCR as GHCR
@@ -113,7 +113,7 @@ sequenceDiagram
     Kargo->>Git: git-push
     Kargo->>Argo: argocd-update
     Argo->>Argo: auto-sync despliega
-```
+{{< /mermaid >}}
 
 Lo importante: el pipeline de CD **nunca** escribe al devex-gitops, solo Kargo.
 
@@ -359,7 +359,7 @@ Un workflow de GHA que corre semanal, consulta los Freight activos de Kargo, y l
 
 Si trabajas en healthcare, fintech, o cualquier industria regulada, esto te importa. Cada paso del flujo deja un registro verificable.
 
-```mermaid
+{{< mermaid >}}
 graph TD
     A["release tag (vX.Y.Z)"] --> B["pipeline run<br/>(GHA run id, source commit SHA)"]
     B --> C["OCI push<br/>(digest sha256:..., cosign signature, SLSA L3)"]
@@ -367,7 +367,7 @@ graph TD
     D --> E["Kargo promotion<br/>(Promotion CR: Freight id, approver, timestamp)"]
     E --> F["git commit<br/>(config-artifact tag)"]
     F --> G["ArgoCD sync<br/>(synced revision = ese commit)"]
-```
+{{< /mermaid >}}
 
 Desde el tag de release hasta el sync de ArgoCD, cada eslabón apunta al anterior. Si un auditor te pregunta "¿qué exactamente se desplegó en producción el martes a las 3pm?", trazas la cadena completa.
 

@@ -71,7 +71,7 @@ Compile config at release time, package it as an OCI artifact, push it to the re
 
 **Why it won:** Immutable, signed, and auditable. A single writer to the gitops repo (Kargo). Config and image in one commit. Zero inconsistency window. No new tooling in the cluster. The same registry infrastructure you already use for images.
 
-```mermaid
+{{< mermaid >}}
 graph TD
     subgraph "Alternative evaluation"
         A["A: Direct commit<br/>(like staging)"] -->|Not atomic| X[REJECTED]
@@ -80,7 +80,7 @@ graph TD
         D["D: GHA dispatch<br/>from Kargo"] -->|Async, not atomic| X
         E["E: OCI config<br/>artifacts"] -->|Immutable + atomic| V[CHOSEN]
     end
-```
+{{< /mermaid >}}
 
 ---
 
@@ -90,7 +90,7 @@ Two pipelines. Total separation of responsibilities.
 
 The release pipeline (CD) compiles, packages, and signs. Never touches the gitops repo. Kargo downloads, verifies, writes, and deploys. A single writer through an atomic commit.
 
-```mermaid
+{{< mermaid >}}
 sequenceDiagram
     participant CI as Release Pipeline
     participant GHCR as GHCR
@@ -113,7 +113,7 @@ sequenceDiagram
     Kargo->>Git: git-push
     Kargo->>Argo: argocd-update
     Argo->>Argo: auto-sync deploys
-```
+{{< /mermaid >}}
 
 The important part: the CD pipeline **never** writes to devex-gitops. Only Kargo does.
 
@@ -359,7 +359,7 @@ A GHA workflow that runs weekly, queries the active Freight from Kargo, and clea
 
 If you work in healthcare, fintech, or any regulated industry, this matters to you. Every step in the flow leaves a verifiable record.
 
-```mermaid
+{{< mermaid >}}
 graph TD
     A["release tag (vX.Y.Z)"] --> B["pipeline run<br/>(GHA run id, source commit SHA)"]
     B --> C["OCI push<br/>(digest sha256:..., cosign signature, SLSA L3)"]
@@ -367,7 +367,7 @@ graph TD
     D --> E["Kargo promotion<br/>(Promotion CR: Freight id, approver, timestamp)"]
     E --> F["git commit<br/>(config-artifact tag)"]
     F --> G["ArgoCD sync<br/>(synced revision = that commit)"]
-```
+{{< /mermaid >}}
 
 From the release tag to the ArgoCD sync, each link points to the previous one. If an auditor asks "what exactly was deployed to production on Tuesday at 3pm?", you trace the complete chain.
 
