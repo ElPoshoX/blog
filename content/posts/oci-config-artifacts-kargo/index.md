@@ -2,7 +2,7 @@
 title: "Config Compilada como Artefacto OCI: Atomicidad en Producción con Kargo"
 weight: 1
 tags: ["oci", "config-artifacts", "kargo", "argocd", "supply-chain", "gitops", "cosign", "ghcr", "helm", "starlark"]
-date: "2026-06-20T10:00:00+00:00"
+date: "2026-06-20T00:00:00+00:00"
 showDateUpdated: false
 cascade:
   showDate: false
