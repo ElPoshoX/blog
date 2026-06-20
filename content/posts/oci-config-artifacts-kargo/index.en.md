@@ -34,7 +34,7 @@ What about multi-region? US and CA need different config artifacts. Same service
 
 Three intertwined problems. Solving one without the other three doesn't work.
 
-![ArgoCD Sync Policy](argocd-sync-policy.png)
+![ArgoCD Sync Policy](/images/oci-config-artifacts-kargo/argocd-sync-policy.png)
 ---
 
 ## Five alternatives, only one survived
@@ -117,7 +117,7 @@ sequenceDiagram
 
 The important part: the CD pipeline **never** writes to devex-gitops. Only Kargo does.
 
-![Kargo Pipeline View](kargo-pipeline-view.png)
+![Kargo Pipeline View](/images/oci-config-artifacts-kargo/kargo-pipeline-view.png)
 
 ---
 
@@ -154,7 +154,7 @@ Three lines. `oras push` uploads the values.yaml as an OCI artifact with a custo
 
 The artifact lives in the same GHCR where you already have your images. Same auth, same garbage collection, same billing.
 
-![GHCR Config Artifacts](ghcr-config-artifacts.png)
+![GHCR Config Artifacts](/images/oci-config-artifacts-kargo/ghcr-config-artifacts.png)
 
 ---
 
@@ -276,7 +276,7 @@ The complete end-to-end: 7 steps, ~5 seconds.
 
 An extra detail that cost a fair bit of debugging: the `argocd-update` timeout in staging wasn't a Kargo bug (issue #4020 as we initially suspected). It was a missing pull secret for GHCR. Kyverno wasn't generating the secret in the service's namespace. ArgoCD tried to sync, the pod couldn't pull the image, timeout. The fix was a Kyverno ClusterPolicy, not a Kargo change.
 
-![Kargo Promotion Steps](kargo-promotion-steps.png)
+![Kargo Promotion Steps](/images/oci-config-artifacts-kargo/kargo-promotion-steps.png)
 
 ---
 

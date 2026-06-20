@@ -34,7 +34,7 @@ Y hay otro problema, dos escritores al mismo repo: el pipeline de CD (config com
 
 Tres problemas entrelazados, resolver uno sin los otros tres no sirve.
 
-![ArgoCD Sync Policy](argocd-sync-policy.png)
+![ArgoCD Sync Policy](/images/oci-config-artifacts-kargo/argocd-sync-policy.png)
 ---
 
 ## Cinco alternativas, solo una sobrevivió
@@ -117,7 +117,7 @@ sequenceDiagram
 
 Lo importante: el pipeline de CD **nunca** escribe al devex-gitops, solo Kargo.
 
-![Kargo Pipeline View](kargo-pipeline-view.png)
+![Kargo Pipeline View](/images/oci-config-artifacts-kargo/kargo-pipeline-view.png)
 
 ---
 
@@ -154,7 +154,7 @@ Tres líneas. `oras push` sube el values.yaml como artefacto OCI con un media ty
 
 El artefacto queda en el mismo GHCR donde ya tienes tus imágenes. Mismo auth, mismo garbage collection, mismo billing.
 
-![GHCR Config Artifacts](ghcr-config-artifacts.png)
+![GHCR Config Artifacts](/images/oci-config-artifacts-kargo/ghcr-config-artifacts.png)
 
 ---
 
@@ -276,7 +276,7 @@ El end-to-end completo: 7 pasos, ~5 segundos.
 
 Un dato extra que costó un rato de debug: el timeout de `argocd-update` en staging no era un bug de Kargo (issue #4020 como sospechábamos inicialmente). Era un pull secret faltante en GHCR. Kyverno no estaba generando el secret en el namespace del servicio. ArgoCD intentaba sincronizar, el pod no podía jalar la imagen, timeout. La solución fue una ClusterPolicy de Kyverno, no un cambio en Kargo.
 
-![Kargo Promotion Steps](kargo-promotion-steps.png)
+![Kargo Promotion Steps](/images/oci-config-artifacts-kargo/kargo-promotion-steps.png)
 
 ---
 
