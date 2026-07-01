@@ -2,7 +2,7 @@
 title: "CloudFront + VPC Origin + WAF en EKS: Cuándo y Cómo"
 weight: 1
 tags: ["cloudfront", "vpc-origin", "waf", "eks", "platform-engineering", "aws", "security"]
-date: "2026-07-01T10:00:00+00:00"
+date: "2026-07-01T00:00:00+00:00"
 showDateUpdated: false
 cascade:
   showDate: false
