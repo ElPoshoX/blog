@@ -11,7 +11,7 @@ cascade:
 ---
 
 {{< lead >}}
-Most AI coding tools understand your code at the level of a junior with grep, when the best ones operate four layers above. Let's talk about the full hierarchy, and why it matters in your day to day.
+Most AI coding tools understand your code at the level of a junior with grep, when the best ones operate four layers above. I organized these layers into seven levels to understand what separates one tool from another.
 {{< /lead >}}
 
 When an AI coding tool needs to know where a function is used, most do exactly what you would do with `grep`. Scan text, find matches, and hope the result makes sense. Some make the **jump to LSP** and get real semantic answers, types, definitions, exact references, but almost none operate at the level where they truly understand your system's architecture, the dependencies between services, the transitive impact of a change.
