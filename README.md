@@ -29,10 +29,10 @@ Code dedicated to my personal blog. Built with [Hugo](https://gohugo.io/) and [B
 
 ## Latest Posts 📬
 <!-- BLOG-POST-LIST:START -->
+- [La jerarquía de comprensión de código: por qué LSP es solo el principio para los AI coding tools](http://elposhox.dev/posts/jerarquia-comprension-codigo-ai/)
 - [CloudFront + VPC Origin + WAF en EKS: Cuándo y Cómo](http://elposhox.dev/posts/cloudfront-vpc-origin-waf-eks/)
 - [Config Compilada como Artefacto OCI: Atomicidad en Producción con Kargo](http://elposhox.dev/posts/oci-config-artifacts-kargo/)
 - [Anatomía de un Loop en Claude Code: Los Bloques, el Diseño y las Métricas que Importan](http://elposhox.dev/posts/anatomia-loop-claude-code/)
 - [Cuánto Cuesta Cada Sesión de Claude Code: Monitoreando con OpenTelemetry](http://elposhox.dev/posts/claude-code-otel-homelab/)
 - [Dev Containers: Tu Entorno de Desarrollo Ideal](http://elposhox.dev/posts/devcontainers/)
-- [Usando GHCR desde ArgoCD](http://elposhox.dev/posts/ghcr-argocd/)
 <!-- BLOG-POST-LIST:END -->
